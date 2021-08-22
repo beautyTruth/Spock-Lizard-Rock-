@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=McLaren&family=ZCOOL+QingKe+HuangYou&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c8fffd;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='39' height='39' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(64)'%3E%3Crect width='100%25' height='100%25' fill='rgba(99, 179, 237,1)'/%3E%3Cpath d='M0 0L20 0L20 20L0 20L0 0zM4.2 4.2L6 14L16.4 16.4L14 6zM20 20L40 20L40 40L20 40L20 20zM23.6 23.6L26 34L35.8 35.8L34 26z' fill='rgba(247, 250, 252,1)'/%3E%3Cpath d='M26 6L35.8 4.2L34 14L23.3 16.7zM6 26L16.7 23.3L14 34L4.2 35.8z' fill='rgba(237, 100, 166,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  margin: 0;
+  min-height: 100vh;
+  font-family: McLaren, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 530px;
+  height: 600px;
+  background: rgba(245, 255, 250, 0.832);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  background: rgba(100, 148, 237, 0.722);
+  height: 100px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: mintcream;
+  font-size: 28px;
+}
+
+.player-container {
+  margin: 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.far {
+  font-size: 50px;
+  margin-right: 40px;
+  user-select: none;
+}
+
+#player .far,
+#player .choice {
+  color: rgb(148, 4, 4);
+  cursor: pointer;
+}
+
+#computer .far,
+#computer .choice {
+  color: rgb(0, 0, 202);
+}
+
+#player .far:last-of-type,
+#computer .far:last-of-type {
+  margin-right: 0;
+}
+
+.selected {
+  color: rgb(242, 0, 255) !important;
+}
+
+.reset-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 40px;
+  margin: unset;
+  margin-top: 20px;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .game-container {
+    height: 580px;
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .player-container {
+    margin: 50px 0 25px 25px;
+  }
+
+  .far {
+    margin-right: 20px;
+    font-size: 43px;
+  }
+
+  .reset-icon {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .game-container {
+    height: 550px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .player-container {
+    margin: 43px 0 25px 20px;
+  }
+
+  .far {
+    font-size: 43px;
+  }
+
+  .reset-icon {
+    margin-top: 15px;
+  }
+
+  .result-container {
+    margin: 0 20px;
+  }
+}
